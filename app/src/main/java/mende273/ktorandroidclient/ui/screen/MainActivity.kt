@@ -9,11 +9,20 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import mende273.ktorandroidclient.network.BASE_URL
 import mende273.ktorandroidclient.ui.component.DrinkItem
 import mende273.ktorandroidclient.ui.theme.KtorAndroidClientTheme
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : ComponentActivity() {
+
+    private val retrofit = Retrofit.Builder()
+        .addConverterFactory(GsonConverterFactory.create())
+        .baseUrl(BASE_URL)
+        .build()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
