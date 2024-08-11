@@ -5,8 +5,8 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface ApiServiceRetrofit {
-    @GET("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink")
+    @GET("api/json/v1/1/filter.php?c=Ordinary_Drink")
     fun getDrinks(): Call<List<DrinksResponse>>
 }
 
-const val BASE_URL = "base_url"
+const val BASE_URL = "https://www.thecocktaildb.com/"
