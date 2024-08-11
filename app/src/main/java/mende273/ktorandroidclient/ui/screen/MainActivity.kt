@@ -9,6 +9,9 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import mende273.ktorandroidclient.network.ApiServiceRetrofit
 import mende273.ktorandroidclient.network.BASE_URL
@@ -25,11 +28,21 @@ class MainActivity : ComponentActivity() {
         .baseUrl(BASE_URL)
         .build()
 
-    val service = retrofit.create(ApiServiceRetrofit::class.java)
-    val get = service.getDrinks()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val service = retrofit.create(ApiServiceRetrofit::class.java)
+        val get = service.getDrinks()
+
+        GlobalScope.launch(Dispatchers.IO) {
+            var responseBody = get.execute()
+            var weatherApiResponse = responseBody.body()?: throw IllegalStateException("bodyがnullだよ！")
+            runBlocking {
+                launch(Dispatchers.Main) {
+
+                }
+            }
+        }
 
         setContent {
             KtorAndroidClientTheme {
