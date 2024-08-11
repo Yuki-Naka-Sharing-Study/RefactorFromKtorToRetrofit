@@ -9,6 +9,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import kotlinx.coroutines.runBlocking
+import mende273.ktorandroidclient.network.ApiServiceRetrofit
 import mende273.ktorandroidclient.network.BASE_URL
 import mende273.ktorandroidclient.ui.component.DrinkItem
 import mende273.ktorandroidclient.ui.theme.KtorAndroidClientTheme
@@ -22,6 +24,9 @@ class MainActivity : ComponentActivity() {
         .addConverterFactory(GsonConverterFactory.create())
         .baseUrl(BASE_URL)
         .build()
+
+    val service = retrofit.create(ApiServiceRetrofit::class.java)
+    val get = service.getDrinks()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
