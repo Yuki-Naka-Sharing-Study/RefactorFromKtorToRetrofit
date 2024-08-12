@@ -1,4 +1,4 @@
-package mende273.retrofitandroidclient.network
+package mende273.ktorandroidclient.network
 
 import mende273.ktorandroidclient.data.model.DrinksResponse
 import retrofit2.http.GET

@@ -1,4 +1,4 @@
-package mende273.retrofitandroidclient
+package mende273.ktorandroidclient
 
 import android.app.Application
 import mende273.ktorandroidclient.di.appModule

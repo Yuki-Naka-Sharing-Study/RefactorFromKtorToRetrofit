@@ -1,6 +1,6 @@
 package mende273.ktorandroidclient.di
 
-import mende273.retrofitandroidclient.ui.screen.MainViewModel
+import mende273.ktorandroidclient.ui.screen.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

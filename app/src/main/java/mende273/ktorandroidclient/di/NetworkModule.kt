@@ -1,6 +1,6 @@
 package mende273.ktorandroidclient.di
 
-import mende273.retrofitandroidclient.network.ApiService
+import mende273.ktorandroidclient.network.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module

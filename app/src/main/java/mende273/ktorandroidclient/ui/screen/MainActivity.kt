@@ -11,7 +11,6 @@ import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import mende273.ktorandroidclient.ui.component.DrinkItem
 import mende273.ktorandroidclient.ui.theme.KtorAndroidClientTheme
-import mende273.retrofitandroidclient.ui.screen.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {

@@ -1,8 +1,7 @@
-package mende273.retrofitandroidclient.data.repository
+package mende273.ktorandroidclient.data.repository
 
 import mende273.ktorandroidclient.data.model.Drink
-import mende273.ktorandroidclient.data.repository.RemoteRepository
-import mende273.retrofitandroidclient.network.ApiService
+import mende273.ktorandroidclient.network.ApiService
 
 class RemoteRepositoryImpl(
     private val apiService: ApiService

@@ -1,4 +1,4 @@
-package mende273.retrofitandroidclient.ui.screen
+package mende273.ktorandroidclient.ui.screen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
