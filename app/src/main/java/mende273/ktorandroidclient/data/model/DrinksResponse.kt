@@ -1,8 +1,9 @@
 package mende273.ktorandroidclient.data.model
 
-import kotlinx.serialization.Serializable
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
-@Serializable
+@JsonClass(generateAdapter = true)
 data class DrinksResponse(
-    val drinks: List<Drink>
+    @Json(name = "drinks") val drinks: List<Drink>
 )

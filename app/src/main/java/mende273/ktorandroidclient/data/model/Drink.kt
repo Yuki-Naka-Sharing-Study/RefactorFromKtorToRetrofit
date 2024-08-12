@@ -1,10 +1,11 @@
 package mende273.ktorandroidclient.data.model
 
-import kotlinx.serialization.Serializable
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
-@Serializable
+@JsonClass(generateAdapter = true)
 data class Drink(
-    val idDrink: Long? = null,
-    val strDrink: String? = null,
-    val strDrinkThumb: String? = null
+    @Json(name = "idDrink") val idDrink: Long? = null,
+    @Json(name = "strDrink") val strDrink: String? = null,
+    @Json(name = "strDrinkThumb") val strDrinkThumb: String? = null
 )
