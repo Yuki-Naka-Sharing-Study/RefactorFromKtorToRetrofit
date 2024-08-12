@@ -17,6 +17,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        multiDexEnabled = true
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -69,6 +70,9 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.8")
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.8")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // multidex
+    implementation("com.android.support:multidex:1.0.3")
 
     // coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
